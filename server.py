@@ -42,11 +42,27 @@ def _check_rate_limit(caller: str = "anonymous") -> Optional[str]:
 # PDF helpers
 # ---------------------------------------------------------------------------
 
+# Path traversal protection
+BLOCKED_PATH_PATTERNS = ["/etc/", "/var/", "/proc/", "/sys/", "/dev/", ".."]
+
+
+def _validate_file_path(file_path: str) -> Optional[str]:
+    """Validate file path against traversal attacks. Returns error message or None."""
+    for pattern in BLOCKED_PATH_PATTERNS:
+        if pattern in file_path:
+            return f"Access denied: path contains blocked pattern '{pattern}'"
+    real = os.path.realpath(file_path)
+    if not os.path.isfile(real):
+        return f"File not found: {file_path}"
+    return None
+
+
 def _open_pdf(file_path: str):
     """Open a PDF file and return the fitz document."""
     import fitz
-    if not os.path.isfile(file_path):
-        raise FileNotFoundError(f"File not found: {file_path}")
+    path_err = _validate_file_path(file_path)
+    if path_err:
+        raise FileNotFoundError(path_err)
     return fitz.open(file_path)
 
 
