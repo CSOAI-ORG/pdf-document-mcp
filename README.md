@@ -1,99 +1,59 @@
 # PDF Document MCP Server
-**By MEOK AI Labs** | [meok.ai](https://meok.ai)
+
+> **By [MEOK AI Labs](https://meok.ai)** — Sovereign AI tools for everyone.
 
 Document processing toolkit for AI agents. Extract text, convert to Markdown, merge PDFs, extract tables, and summarize documents -- all locally with no external API dependencies.
+
+[![MCPize](https://img.shields.io/badge/MCPize-Listed-blue)](https://mcpize.com/mcp/pdf-document)
+[![MIT License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `extract_text_from_pdf` | Extract text from all or specific pages of a PDF |
-| `convert_pdf_to_markdown` | Convert PDF to structured Markdown with heading detection |
+| `extract_text_from_pdf` | Extract text content from a PDF file |
+| `convert_pdf_to_markdown` | Convert a PDF document to Markdown format |
 | `merge_pdfs` | Merge multiple PDF files into a single document |
-| `extract_tables` | Extract table structures from a PDF page using position analysis |
-| `summarize_document` | Generate metadata, statistics, headings, and per-page summaries |
+| `extract_tables` | Extract table-like structures from a PDF page |
+| `summarize_document` | Generate a structural summary of a PDF |
 
-## Installation
-
-```bash
-pip install mcp PyMuPDF
-```
-
-No external services, API keys, or cloud dependencies required. All processing happens locally.
-
-## Usage
-
-### Run the server
+## Quick Start
 
 ```bash
+pip install mcp
+git clone https://github.com/CSOAI-ORG/pdf-document-mcp.git
+cd pdf-document-mcp
 python server.py
 ```
 
-### Claude Desktop config
+## Claude Desktop Config
 
 ```json
 {
   "mcpServers": {
     "pdf-document": {
       "command": "python",
-      "args": ["/path/to/pdf-document-mcp/server.py"]
+      "args": ["server.py"],
+      "cwd": "/path/to/pdf-document-mcp"
     }
   }
 }
 ```
 
-### Example calls
-
-**Extract text from a PDF:**
-```
-Tool: extract_text_from_pdf
-Input: {"file_path": "/Users/me/documents/report.pdf"}
-Output: {"total_pages": 12, "total_characters": 48320, "pages": [{"page": 1, "text": "...", "char_count": 4210}, ...]}
-```
-
-**Extract specific pages only:**
-```
-Tool: extract_text_from_pdf
-Input: {"file_path": "/Users/me/documents/report.pdf", "pages": [1, 3, 5]}
-Output: {"extracted_pages": 3, "pages": [...]}
-```
-
-**Convert PDF to Markdown:**
-```
-Tool: convert_pdf_to_markdown
-Input: {"file_path": "/Users/me/documents/whitepaper.pdf"}
-Output: {"markdown": "# whitepaper.pdf\n\n---\n## Page 1\n\n### Introduction\n\nThis paper presents...", "char_count": 15200}
-```
-
-**Extract tables:**
-```
-Tool: extract_tables
-Input: {"file_path": "/Users/me/documents/financials.pdf", "page_num": 3}
-Output: {"tables_found": 2, "tables": [{"header": ["Quarter", "Revenue", "Profit"], "rows": [["Q1", "$1.2M", "$400K"], ...]}]}
-```
-
-**Merge multiple PDFs:**
-```
-Tool: merge_pdfs
-Input: {"file_paths": ["/tmp/part1.pdf", "/tmp/part2.pdf", "/tmp/part3.pdf"], "output_path": "/tmp/combined.pdf"}
-Output: {"output": "/tmp/combined.pdf", "total_pages": 28}
-```
-
-**Summarize a document:**
-```
-Tool: summarize_document
-Input: {"file_path": "/Users/me/documents/thesis.pdf"}
-Output: {"statistics": {"total_pages": 45, "total_words": 12500, "total_images": 8}, "headings": [...], "metadata": {"author": "...", "title": "..."}}
-```
-
 ## Pricing
 
-| Tier | Limit | Price |
-|------|-------|-------|
-| Free | 20 calls/day | $0 |
-| Pro | Unlimited + OCR support + batch processing | $9/mo |
-| Enterprise | Custom + priority support | Contact us |
+| Plan | Price | Requests |
+|------|-------|----------|
+| Free | $0/mo | 20 calls/day |
+| Pro | $9/mo | Unlimited + OCR support + batch processing |
+| Enterprise | Contact us | Custom + priority support |
 
-## License
+[Get on MCPize](https://mcpize.com/mcp/pdf-document)
 
-MIT
+## Part of MEOK AI Labs
+
+This is one of 255+ MCP servers by MEOK AI Labs. Browse all at [meok.ai](https://meok.ai) or [GitHub](https://github.com/CSOAI-ORG).
+
+---
+**MEOK AI Labs** | [meok.ai](https://meok.ai) | nicholas@meok.ai | United Kingdom
