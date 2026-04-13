@@ -1,0 +1,10 @@
+name: pdf-document-mcp
+description: "MEOK AI Labs — Document processing toolkit for AI agents. Extract text, convert to Markdown,"
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/pdf-document-mcp
+license: MIT
+categories: [Document Processing, PDF]
+tags: [pdf, document-processing, pdf-extraction, pdf-generation, document-ai]
+runtime: python
+entrypoint: server.py
