@@ -331,8 +331,7 @@ def _summarize_document(file_path: str) -> dict:
 # ---------------------------------------------------------------------------
 mcp = FastMCP(
     "PDF Document MCP",
-    instructions="Document processing toolkit: extract text from PDFs, convert to Markdown, merge files, extract tables, and summarize documents. By MEOK AI Labs.",
-)
+    instructions="Document processing toolkit: extract text from PDFs, convert to Markdown, merge files, extract tables, and summarize documents. By MEOK AI Labs.")
 
 
 @mcp.tool()
