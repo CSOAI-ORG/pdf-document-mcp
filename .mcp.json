@@ -1,24 +1,99 @@
 {
   "name": "pdf-document-mcp",
-  "description": "MEOK AI Labs \u2014 Document processing toolkit for AI agents. Extract text, convert to Markdown,",
-  "vendor": "MEOK AI Labs",
-  "homepage": "https://meok.ai",
-  "repository": "https://github.com/CSOAI-ORG/pdf-document-mcp",
-  "runtime": "python",
-  "entrypoint": "server.py",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Sovereign AI tools for everyone.",
+  "version": "1.0.0",
   "tools": [
-    "extract_text_from_pdf",
-    "convert_pdf_to_markdown",
-    "merge_pdfs",
-    "extract_tables",
-    "summarize_document"
-  ],
-  "categories": [
-    "Document Processing",
-    "PDF"
-  ],
-  "pricing": {
-    "free": "50 calls/day",
-    "pro": "$9/mo"
-  }
+    {
+      "name": "extract_text_from_pdf",
+      "description": "Extract text content from a PDF file. Optionally specify page numbers",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "file_path": {
+            "type": "string"
+          },
+          "pages": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            },
+            "nullable": true
+          }
+        },
+        "required": [
+          "file_path"
+        ]
+      }
+    },
+    {
+      "name": "convert_pdf_to_markdown",
+      "description": "Convert a PDF document to Markdown format. Detects headings based on",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "file_path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "file_path"
+        ]
+      }
+    },
+    {
+      "name": "merge_pdfs",
+      "description": "Merge multiple PDF files into a single document.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "file_paths": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "output_path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "file_paths",
+          "output_path"
+        ]
+      }
+    },
+    {
+      "name": "extract_tables",
+      "description": "Extract table-like structures from a specific page in a PDF.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "file_path": {
+            "type": "string"
+          },
+          "page_num": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "file_path"
+        ]
+      }
+    },
+    {
+      "name": "summarize_document",
+      "description": "Generate a structural summary of a PDF: metadata, statistics (pages,",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "file_path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "file_path"
+        ]
+      }
+    }
+  ]
 }

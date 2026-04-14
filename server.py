@@ -11,6 +11,11 @@ Install: pip install mcp PyMuPDF
 Run:     python server.py
 """
 
+
+import sys, os
+sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
+from auth_middleware import check_access
+
 import io
 import json
 import os
@@ -335,7 +340,7 @@ mcp = FastMCP(
 
 
 @mcp.tool()
-def extract_text_from_pdf(file_path: str, pages: Optional[list[int]] = None) -> dict:
+def extract_text_from_pdf(file_path: str, pages: Optional[list[int]] = None, api_key: str = "") -> dict:
     """Extract text content from a PDF file. Optionally specify page numbers
     (1-indexed) to extract from specific pages only.
 
@@ -343,6 +348,10 @@ def extract_text_from_pdf(file_path: str, pages: Optional[list[int]] = None) -> 
         file_path: Absolute path to the PDF file
         pages: Optional list of page numbers to extract (e.g. [1, 3, 5])
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -353,13 +362,17 @@ def extract_text_from_pdf(file_path: str, pages: Optional[list[int]] = None) -> 
 
 
 @mcp.tool()
-def convert_pdf_to_markdown(file_path: str) -> dict:
+def convert_pdf_to_markdown(file_path: str, api_key: str = "") -> dict:
     """Convert a PDF document to Markdown format. Detects headings based on
     font size, preserves bold text, and marks image locations.
 
     Args:
         file_path: Absolute path to the PDF file
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -370,13 +383,17 @@ def convert_pdf_to_markdown(file_path: str) -> dict:
 
 
 @mcp.tool()
-def merge_pdfs(file_paths: list[str], output_path: str) -> dict:
+def merge_pdfs(file_paths: list[str], output_path: str, api_key: str = "") -> dict:
     """Merge multiple PDF files into a single document.
 
     Args:
         file_paths: List of absolute paths to PDF files to merge (in order)
         output_path: Absolute path where the merged PDF will be saved
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -387,7 +404,7 @@ def merge_pdfs(file_paths: list[str], output_path: str) -> dict:
 
 
 @mcp.tool()
-def extract_tables(file_path: str, page_num: int = 1) -> dict:
+def extract_tables(file_path: str, page_num: int = 1, api_key: str = "") -> dict:
     """Extract table-like structures from a specific page in a PDF.
     Uses text position analysis to detect rows and columns.
 
@@ -395,6 +412,10 @@ def extract_tables(file_path: str, page_num: int = 1) -> dict:
         file_path: Absolute path to the PDF file
         page_num: Page number to extract tables from (1-indexed, default 1)
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}
@@ -405,13 +426,17 @@ def extract_tables(file_path: str, page_num: int = 1) -> dict:
 
 
 @mcp.tool()
-def summarize_document(file_path: str) -> dict:
+def summarize_document(file_path: str, api_key: str = "") -> dict:
     """Generate a structural summary of a PDF: metadata, statistics (pages,
     words, images), detected headings/outline, and per-page summaries.
 
     Args:
         file_path: Absolute path to the PDF file
     """
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return {"error": msg, "upgrade_url": "https://meok.ai/pricing"}
+
     err = _check_rate_limit()
     if err:
         return {"error": err}

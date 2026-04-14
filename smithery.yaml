@@ -1,10 +1,44 @@
 name: pdf-document-mcp
-description: "MEOK AI Labs — Document processing toolkit for AI agents. Extract text, convert to Markdown,"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/pdf-document-mcp
-license: MIT
-categories: [Document Processing, PDF]
-tags: [pdf, document-processing, pdf-extraction, pdf-generation, document-ai]
-runtime: python
-entrypoint: server.py
+description: "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Sovereign AI tools for\
+  \ everyone."
+version: 1.0.0
+tools:
+- name: extract_text_from_pdf
+  description: Extract text content from a PDF file. Optionally specify page numbers
+  parameters:
+  - name: file_path
+    type: string
+    required: true
+  - name: pages
+    type: array
+    required: false
+- name: convert_pdf_to_markdown
+  description: Convert a PDF document to Markdown format. Detects headings based on
+  parameters:
+  - name: file_path
+    type: string
+    required: true
+- name: merge_pdfs
+  description: Merge multiple PDF files into a single document.
+  parameters:
+  - name: file_paths
+    type: array
+    required: true
+  - name: output_path
+    type: string
+    required: true
+- name: extract_tables
+  description: Extract table-like structures from a specific page in a PDF.
+  parameters:
+  - name: file_path
+    type: string
+    required: true
+  - name: page_num
+    type: integer
+    required: false
+- name: summarize_document
+  description: 'Generate a structural summary of a PDF: metadata, statistics (pages,'
+  parameters:
+  - name: file_path
+    type: string
+    required: true
