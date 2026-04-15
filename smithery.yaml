@@ -1,6 +1,6 @@
 name: pdf-document-mcp
-description: 'Document processing toolkit: extract text from PDFs, convert to Markdown,
-  merge files, extract table'
+description: AI-powered pdf document MCP server for agents. Supports extract text
+  from pdf, convert pdf to markdown, merge pdfs. By MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: extract_text_from_pdf

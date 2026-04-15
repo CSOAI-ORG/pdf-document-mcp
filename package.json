@@ -1,7 +1,7 @@
 {
   "name": "pdf-document-mcp",
   "version": "1.0.0",
-  "description": "MEOK AI Labs \u2014 pdf document MCP Server",
+  "description": "AI-powered pdf document MCP server for agents. Supports extract text from pdf, convert pdf to markdown, merge pdfs. By MEOK AI Labs.",
   "main": "server.py",
   "mcp": {
     "name": "pdf document",
