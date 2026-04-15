@@ -22,3 +22,6 @@ Repository = "https://github.com/CSOAI-ORG/pdf-document-mcp"
 [tool.hatch.build.targets.wheel]
 packages = ["."]
 only-include = ["server.py"]
+
+[project.scripts]
+pdf_document_mcp = "server:main"
