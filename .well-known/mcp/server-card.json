@@ -1,0 +1,57 @@
+{
+  "name": "PDF Document MCP",
+  "description": "Document processing toolkit: extract text from PDFs, convert to Markdown, merge files, extract tables, and summarize documents. By MEOK AI Labs.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/pdf-document-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "extract_text_from_pdf",
+      "description": "Extract text content from a PDF file. Optionally specify page numbers"
+    },
+    {
+      "name": "convert_pdf_to_markdown",
+      "description": "Convert a PDF document to Markdown format. Detects headings based on"
+    },
+    {
+      "name": "merge_pdfs",
+      "description": "Merge multiple PDF files into a single document."
+    },
+    {
+      "name": "extract_tables",
+      "description": "Extract table-like structures from a specific page in a PDF."
+    },
+    {
+      "name": "summarize_document",
+      "description": "Generate a structural summary of a PDF: metadata, statistics (pages,"
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Natural Language Processing"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
