@@ -1,6 +1,6 @@
 {
   "name": "pdf-document-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Sovereign AI tools for everyone.",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Document processing toolkit: extract text from PDFs, convert to Markdown, merge files, extract table",
   "version": "1.0.0",
   "tools": [
     {
@@ -13,11 +13,7 @@
             "type": "string"
           },
           "pages": {
-            "type": "array",
-            "items": {
-              "type": "integer"
-            },
-            "nullable": true
+            "type": "integer"
           }
         },
         "required": [
@@ -47,10 +43,7 @@
         "type": "object",
         "properties": {
           "file_paths": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+            "type": "array"
           },
           "output_path": {
             "type": "string"

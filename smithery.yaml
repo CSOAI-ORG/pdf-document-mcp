@@ -1,6 +1,6 @@
 name: pdf-document-mcp
-description: "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Sovereign AI tools for\
-  \ everyone."
+description: 'Document processing toolkit: extract text from PDFs, convert to Markdown,
+  merge files, extract table'
 version: 1.0.0
 tools:
 - name: extract_text_from_pdf
@@ -10,7 +10,7 @@ tools:
     type: string
     required: true
   - name: pages
-    type: array
+    type: integer
     required: false
 - name: convert_pdf_to_markdown
   description: Convert a PDF document to Markdown format. Detects headings based on
