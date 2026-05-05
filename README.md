@@ -1,59 +1,38 @@
-# PDF Document MCP Server
+<div align="center">
 
-> **By [MEOK AI Labs](https://meok.ai)** — Sovereign AI tools for everyone.
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/pdf-document-mcp)](https://github.com/CSOAI-ORG/pdf-document-mcp/stargazers)
 
-Document processing toolkit for AI agents. Extract text, convert to Markdown, merge PDFs, extract tables, and summarize documents -- all locally with no external API dependencies.
+# updfU documentU mcp
 
-[![MCPize](https://img.shields.io/badge/MCPize-Listed-blue)](https://mcpize.com/mcp/pdf-document)
-[![MIT License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+**Document processing toolkit for AI agents. Extract text, convert to Markdown, merge PDFs, extract tables, and summarize documents -- all locally with no external API dependencies.**
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/pdf-document-mcp)](https://www.npmjs.com/package/@meok-ai/pdf-document-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
 
-## Tools
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/pdf-document-mcp/issues)
 
-| Tool | Description |
-|------|-------------|
-| `extract_text_from_pdf` | Extract text content from a PDF file |
-| `convert_pdf_to_markdown` | Convert a PDF document to Markdown format |
-| `merge_pdfs` | Merge multiple PDF files into a single document |
-| `extract_tables` | Extract table-like structures from a PDF page |
-| `summarize_document` | Generate a structural summary of a PDF |
+</div>
+
+---
+
+## Installation
+
+```bash
+pip install pdf-document-mcp
+# or
+npm install -g @meok-ai/pdf-document-mcp
+```
 
 ## Quick Start
 
-```bash
-pip install mcp
-git clone https://github.com/CSOAI-ORG/pdf-document-mcp.git
-cd pdf-document-mcp
-python server.py
-```
+See the project repository for full documentation and examples.
 
-## Claude Desktop Config
+## Enterprise Support
 
-```json
-{
-  "mcpServers": {
-    "pdf-document": {
-      "command": "python",
-      "args": ["server.py"],
-      "cwd": "/path/to/pdf-document-mcp"
-    }
-  }
-}
-```
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
-## Pricing
+## License
 
-| Plan | Price | Requests |
-|------|-------|----------|
-| Free | $0/mo | 20 calls/day |
-| Pro | $9/mo | Unlimited + OCR support + batch processing |
-| Enterprise | Contact us | Custom + priority support |
-
-[Get on MCPize](https://mcpize.com/mcp/pdf-document)
-
-## Part of MEOK AI Labs
-
-This is one of 255+ MCP servers by MEOK AI Labs. Browse all at [meok.ai](https://meok.ai) or [GitHub](https://github.com/CSOAI-ORG).
-
----
-**MEOK AI Labs** | [meok.ai](https://meok.ai) | nicholas@meok.ai | United Kingdom
+MIT © [CSOAI](https://csoai.org)
