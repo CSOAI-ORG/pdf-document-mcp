@@ -1,45 +1,59 @@
-[![pdf-document-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/pdf-document-mcp/badges/score.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/pdf-document-mcp)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
-[![PyPI](https://img.shields.io/pypi/v/pdf-document-mcp)](https://pypi.org/project/pdf-document-mcp/)
-
-[![pdf-document-mcp MCP server](https://glama.ai/mcp/servers/CSOAI-ORG/pdf-document-mcp/badges/card.svg)](https://glama.ai/mcp/servers/CSOAI-ORG/pdf-document-mcp)
-
 <div align="center">
 
-[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/pdf-document-mcp)](https://github.com/CSOAI-ORG/pdf-document-mcp/stargazers)
+# Pdf Document MCP
 
-# updfU documentU mcp
+**MCP server for pdf document mcp operations**
 
-**Document processing toolkit for AI agents. Extract text, convert to Markdown, merge PDFs, extract tables, and summarize documents -- all locally with no external API dependencies.**
-
-[![npm version](https://img.shields.io/npm/v/@meok-ai/pdf-document-mcp)](https://www.npmjs.com/package/@meok-ai/pdf-document-mcp)
+[![PyPI](https://img.shields.io/pypi/v/meok-pdf-document-mcp)](https://pypi.org/project/meok-pdf-document-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
-
-[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/pdf-document-mcp/issues)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-MCP_Server-purple)](https://meok.ai)
 
 </div>
 
----
+## Overview
+
+Pdf Document MCP provides AI-powered tools via the Model Context Protocol (MCP).
+
+## Tools
+
+| Tool | Description |
+|------|-------------|
+| `extract_text_from_pdf` | Extract text content from a PDF file. Optionally specify page numbers |
+| `convert_pdf_to_markdown` | Convert a PDF document to Markdown format. Detects headings based on |
+| `merge_pdfs` | Merge multiple PDF files into a single document. |
+| `extract_tables` | Extract table-like structures from a specific page in a PDF. |
+| `summarize_document` | Generate a structural summary of a PDF: metadata, statistics (pages, |
 
 ## Installation
 
 ```bash
-pip install pdf-document-mcp
-# or
-npm install -g @meok-ai/pdf-document-mcp
+pip install meok-pdf-document-mcp
 ```
 
-## Quick Start
+## Usage with Claude Desktop
 
-See the project repository for full documentation and examples.
+Add to your Claude Desktop MCP config (`claude_desktop_config.json`):
 
-## Enterprise Support
+```json
+{
+  "mcpServers": {
+    "pdf-document-mcp": {
+      "command": "python",
+      "args": ["-m", "meok_pdf_document_mcp.server"]
+    }
+  }
+}
+```
 
-- 📧 nicholas@csoai.org
-- 🌐 [CSOAI.org](https://csoai.org)
+## Usage with FastMCP
+
+```python
+from mcp.server.fastmcp import FastMCP
+
+# This server exposes 5 tool(s) via MCP
+# See server.py for full implementation
+```
 
 ## License
 
-MIT © [CSOAI](https://csoai.org)
-<!-- mcp-name: io.github.CSOAI-ORG/pdf-document-mcp -->
+MIT © [MEOK AI Labs](https://meok.ai)
