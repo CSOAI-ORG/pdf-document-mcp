@@ -1,0 +1,68 @@
+{
+  "name": "pdf-document-mcp",
+  "description": "Pdf Document MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/pdf-document-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "extract_text_from_pdf",
+      "name": "Extract Text From Pdf",
+      "description": "extract_text_from_pdf via pdf-document-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "convert_pdf_to_markdown",
+      "name": "Convert Pdf To Markdown",
+      "description": "convert_pdf_to_markdown via pdf-document-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "merge_pdfs",
+      "name": "Merge Pdfs",
+      "description": "merge_pdfs via pdf-document-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "extract_tables",
+      "name": "Extract Tables",
+      "description": "extract_tables via pdf-document-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "summarize_document",
+      "name": "Summarize Document",
+      "description": "summarize_document via pdf-document-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

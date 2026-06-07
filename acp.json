@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "pdf-document-mcp",
+    "description": "Pdf Document MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "pdf-document-mcp"
+      }
+    ],
+    "capabilities": [
+      "extract_text_from_pdf",
+      "convert_pdf_to_markdown",
+      "merge_pdfs",
+      "extract_tables",
+      "summarize_document"
+    ]
+  }
+}
