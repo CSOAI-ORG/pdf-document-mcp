@@ -1,0 +1,36 @@
+# pdf-document-mcp
+# **MCP server for pdf document mcp operations**
+
+## Install
+```bash
+pip install pdf-document-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `extract_text_from_pdf`
+Extract text content from a PDF file. Optionally specify page numbers
+
+### `convert_pdf_to_markdown`
+Convert a PDF document to Markdown format. Detects headings based on
+
+### `merge_pdfs`
+Merge multiple PDF files into a single document.
+
+### `extract_tables`
+Extract table-like structures from a specific page in a PDF.
+
+### `summarize_document`
+Generate a structural summary of a PDF: metadata, statistics (pages,
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

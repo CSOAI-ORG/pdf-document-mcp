@@ -1,0 +1,28 @@
+{
+  "name": "pdf-document-mcp",
+  "title": "Pdf Document Mcp",
+  "description": "AI-powered pdf document MCP server for agents. Supports extract text from pdf, convert pdf to markdown, merge pdfs. By MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "extract_text_from_pdf"
+    },
+    {
+      "name": "convert_pdf_to_markdown"
+    },
+    {
+      "name": "merge_pdfs"
+    },
+    {
+      "name": "extract_tables"
+    },
+    {
+      "name": "summarize_document"
+    }
+  ]
+}

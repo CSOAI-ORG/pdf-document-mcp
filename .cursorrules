@@ -1,0 +1,9 @@
+# pdf-document-mcp - Auto-trigger Rules
+
+When the user asks about pdf document, use pdf-document-mcp tools: extract_text_from_pdf, convert_pdf_to_markdown, merge_pdfs, extract_tables, summarize_document
+
+**MCP server for pdf document mcp operations**
+
+Install: `pip install pdf-document-mcp`
+
+By MEOK AI Labs — MIT licensed.
