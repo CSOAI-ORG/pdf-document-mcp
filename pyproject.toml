@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 name = "pdf-document-mcp"
 version = "1.0.7"
 readme = "README.md"
-description = "AI-powered pdf document MCP server for agents. Supports extract text from pdf, convert pdf to markdown, merge pdfs. By MEOK AI Labs."
+description = "Pdf Document Mcp: extract text from pdf (Extract text content from a PDF file. Optionally specify pag); convert pdf to markdown (Convert a PDF document to Markdown format. Detects headings ); merge pdfs (Merge multiple PDF files into a single document.); extract tables (Extract table-like structures from a specific page in a PDF.). pip install pdf-document-mcp."
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
 authors = [{name = "MEOK AI Labs", email = "nicholas@meok.ai"}]

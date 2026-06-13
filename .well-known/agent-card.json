@@ -1,0 +1,117 @@
+{
+  "name": "Pdf Document Mcp",
+  "version": "1.0.6",
+  "url": "https://mcp.meok.ai/pdf-document-mcp/a2a",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "protocolVersion": "0.3.0",
+  "description": "AI-powered pdf document MCP server for agents. Supports extract text from pdf, convert pdf to markdown, merge pdfs. By MEOK AI Labs.",
+  "provider": {
+    "organization": "MEOK AI LABS",
+    "url": "https://meok.ai"
+  },
+  "defaultInputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "skills": [
+    {
+      "id": "extract_text_from_pdf",
+      "name": "Extract Text From Pdf",
+      "description": "Extract Text From Pdf — a tool of the pdf-document-mcp MCP.",
+      "tags": [
+        "mcp",
+        "meok"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "convert_pdf_to_markdown",
+      "name": "Convert Pdf To Markdown",
+      "description": "Convert Pdf To Markdown — a tool of the pdf-document-mcp MCP.",
+      "tags": [
+        "mcp",
+        "meok"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "merge_pdfs",
+      "name": "Merge Pdfs",
+      "description": "Merge Pdfs — a tool of the pdf-document-mcp MCP.",
+      "tags": [
+        "mcp",
+        "meok"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "extract_tables",
+      "name": "Extract Tables",
+      "description": "Extract Tables — a tool of the pdf-document-mcp MCP.",
+      "tags": [
+        "mcp",
+        "meok"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "summarize_document",
+      "name": "Summarize Document",
+      "description": "Summarize Document — a tool of the pdf-document-mcp MCP.",
+      "tags": [
+        "mcp",
+        "meok"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    }
+  ],
+  "documentationUrl": "https://meok.ai",
+  "x-meok": {
+    "mcp_name": "pdf-document-mcp",
+    "verifier": "https://proofof.ai/verify",
+    "governed_by": "CSOAI 52-article charter"
+  }
+}
