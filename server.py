@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """
+Buy Pro: https://www.csoai.org/checkout
+
 PDF Document MCP Server
 ========================
 Document processing toolkit for AI agents. Extract text, convert to Markdown,
